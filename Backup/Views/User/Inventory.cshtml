@@ -1,0 +1,56 @@
+@model IEnumerable<SmartRestaurantWasteManagement.Models.Inventory>
+@{
+    ViewBag.Title = "Raw Ingredient Inventory";
+}
+
+<div class="glass-card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h2><i class="fa-solid fa-boxes-stacked"></i> Raw Ingredient Stock Inventory</h2>
+        <a href="@Url.Action("Create", "Inventory")" class="btn-primary-custom"><i class="fa-solid fa-plus"></i> Add Ingredient</a>
+    </div>
+
+    <table class="table-custom">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Category</th>
+                <th>Current Stock</th>
+                <th>Min Threshold</th>
+                <th>Unit Price</th>
+                <th>Stock Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    bool isLow = item.CurrentStock <= item.MinimumThreshold;
+                    <tr>
+                        <td><strong>@item.ItemName</strong></td>
+                        <td><span class="badge-custom badge-info">@item.Category</span></td>
+                        <td>@item.CurrentStock @item.Unit</td>
+                        <td>@item.MinimumThreshold @item.Unit</td>
+                        <td>$@item.UnitPrice.ToString("F2")</td>
+                        <td>
+                            @if (isLow)
+                            {
+                                <span class="badge-custom badge-danger">Low Stock Alert</span>
+                            }
+                            else
+                            {
+                                <span class="badge-custom badge-success">Sufficient</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" style="text-align: center; color: var(--text-muted);">No inventory records available.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

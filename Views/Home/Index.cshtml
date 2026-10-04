@@ -1,0 +1,52 @@
+@{
+    ViewBag.Title = "Smart Restaurant Food Waste Management System";
+}
+
+<div class="glass-card" style="text-align: center; padding: 4rem 2rem;">
+    <h1 style="font-size: 2.8rem; margin-bottom: 1rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Smart Restaurant Food Waste Management System ♻️
+    </h1>
+    <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 800px; margin: 0 auto 2.5rem;">
+        An intelligent ASP.NET MVC 5 application built to monitor daily food preparation, track waste logs, forecast demand using predictions, manage ingredient inventory, and enable food donations.
+    </p>
+
+    <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem;">
+        <a href="@Url.Action("Dashboard", "User")" class="btn-primary-custom">
+            <i class="fa-solid fa-gauge-high"></i> User Dashboard
+        </a>
+        <a href="@Url.Action("Dashboard", "Admin")" class="btn-secondary-custom">
+            <i class="fa-solid fa-user-shield"></i> Admin Portal
+        </a>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div>
+                <div class="stat-value">@ViewBag.TotalFoods</div>
+                <div class="stat-label">Food Menu Items</div>
+            </div>
+            <div class="stat-icon"><i class="fa-solid fa-bowl-food"></i></div>
+        </div>
+        <div class="stat-card">
+            <div>
+                <div class="stat-value">@ViewBag.TotalWasteLogs</div>
+                <div class="stat-label">Waste Entries Logged</div>
+            </div>
+            <div class="stat-icon" style="background: rgba(244, 63, 94, 0.15); color: var(--accent-rose);"><i class="fa-solid fa-trash-arrow-up"></i></div>
+        </div>
+        <div class="stat-card">
+            <div>
+                <div class="stat-value">@ViewBag.TotalInventory</div>
+                <div class="stat-label">Inventory Tracked</div>
+            </div>
+            <div class="stat-icon" style="background: rgba(59, 130, 246, 0.15); color: var(--accent-blue);"><i class="fa-solid fa-boxes-stacked"></i></div>
+        </div>
+        <div class="stat-card">
+            <div>
+                <div class="stat-value">@ViewBag.ActiveUsers</div>
+                <div class="stat-label">Active Users</div>
+            </div>
+            <div class="stat-icon" style="background: rgba(139, 92, 246, 0.15); color: var(--accent-purple);"><i class="fa-solid fa-users"></i></div>
+        </div>
+    </div>
+</div>

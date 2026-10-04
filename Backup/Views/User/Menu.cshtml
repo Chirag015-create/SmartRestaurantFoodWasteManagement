@@ -1,0 +1,35 @@
+@model IEnumerable<SmartRestaurantWasteManagement.Models.Food>
+@{
+    ViewBag.Title = "Restaurant Menu";
+}
+
+<div class="glass-card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h2><i class="fa-solid fa-utensils"></i> Active Restaurant Menu</h2>
+        <a href="@Url.Action("AddFood", "User")" class="btn-primary-custom"><i class="fa-solid fa-plus"></i> Add New Menu Item</a>
+    </div>
+
+    <div class="stats-grid">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var food in Model)
+            {
+                <div class="stat-card" style="flex-direction: column; align-items: flex-start;">
+                    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                        <span class="badge-custom badge-info">@food.Category</span>
+                        <span style="font-weight: 700; color: var(--accent-green);">$@food.Price</span>
+                    </div>
+                    <h3 style="margin: 0.75rem 0 0.25rem;">@food.Name</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">@food.Description</p>
+                    <div style="font-size: 0.8rem; color: var(--text-muted);">
+                        Shelf Life: @food.ShelfLifeDays Days | Unit: @food.Unit
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p style="color: var(--text-muted);">No menu items registered yet.</p>
+        }
+    </div>
+</div>

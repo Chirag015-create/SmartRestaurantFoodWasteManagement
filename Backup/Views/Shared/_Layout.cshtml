@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Smart Restaurant Waste Management</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Custom Theme Styling -->
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="bg-dark text-light d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary border-bottom border-secondary-subtle sticky-top">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand fw-bold text-success d-flex align-items-center gap-2" href="@Url.Action("Index", "Home")">
+                    <i class="fa-solid fa-leaf text-emerald"></i>
+                    <span>SmartWaste ♻️</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("Index", "Home")"><i class="fa-solid fa-house me-1"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("Dashboard", "User")"><i class="fa-solid fa-gauge-high me-1"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("FoodList", "User")"><i class="fa-solid fa-utensils me-1"></i> Food List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("AddFood", "User")"><i class="fa-solid fa-plus me-1"></i> Add Food</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("DailyFood", "User")"><i class="fa-solid fa-kitchen-set me-1"></i> Daily Prep</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("WasteEntry", "User")"><i class="fa-solid fa-trash-can me-1"></i> Log Waste</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("WasteHistory", "User")"><i class="fa-solid fa-clock-rotate-left me-1"></i> Waste History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("Prediction", "User")"><i class="fa-solid fa-wand-magic-sparkles me-1"></i> AI Forecast</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("Inventory", "User")"><i class="fa-solid fa-boxes-stacked me-1"></i> Inventory</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("Donation", "User")"><i class="fa-solid fa-hand-holding-heart me-1"></i> Donation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light-50" href="@Url.Action("Reports", "User")"><i class="fa-solid fa-chart-line me-1"></i> Reports</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0 gap-2 align-items-center">
+                        <li class="nav-item">
+                            <a class="btn btn-outline-success btn-sm rounded-pill px-3" href="@Url.Action("Profile", "User")">
+                                <i class="fa-solid fa-user me-1"></i> Profile
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-warning btn-sm rounded-pill px-3" href="@Url.Action("Dashboard", "Admin")">
+                                <i class="fa-solid fa-user-shield me-1"></i> Admin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid px-4 py-4 flex-grow-1">
+        @RenderBody()
+    </main>
+
+    <footer class="bg-body-tertiary border-top border-secondary-subtle py-3 text-center text-secondary small">
+        <div class="container">
+            <p class="mb-0">&copy; @DateTime.Now.Year - SmartRestaurantWasteManagement | Powered by Bootstrap 5 & ASP.NET MVC 5</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/jquery.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,505 @@
+mart Restaurant Food Waste Management — Complete File/Folder Map
+smart-restaurant-waste-web/
+│
+├── 📁 public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
+│
+├── 📁 src/
+│   │
+│   ├── 📁 components/
+│   │   │
+│   │   ├── 📁 common/
+│   │   │   ├── New-Item Navbar.jsx
+│   │   │   ├── New-Item Sidebar.jsx
+│   │   │   ├── New-Item Footer.jsx
+│   │   │   ├── New-Item LoadingSpinner.jsx
+│   │   │   ├── New-Item ErrorBoundary.jsx
+│   │   │   ├── New-Item Breadcrumb.jsx
+│   │   │   └── New-Item Pagination.jsx
+│   │   │
+│   │   ├── 📁 mkdir auth/
+│   │   │   ├── New-Item Login.jsx
+│   │   │   ├── New-Item Register.jsx
+│   │   │   ├── New-Item ForgotPassword.jsx
+│   │   │   └── New-Item ResetPassword.jsx
+│   │   │
+│   │   ├── 📁 dashboard/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── DashboardStats.jsx
+│   │   │   ├── RecentActivity.jsx
+│   │   │   └── QuickActions.jsx
+│   │   │
+│   │   ├── 📁 mkdir records/
+│   │   │   ├── RecordList.jsx
+│   │   │   ├── AddRecord.jsx
+│   │   │   ├── EditRecord.jsx
+│   │   │   ├── RecordDetails.jsx
+│   │   │   ├── DeleteRecord.jsx
+│   │   │   └── RecordFilters.jsx
+│   │   │
+│   │   ├── 📁 mkdir food/
+│   │   │   ├── FoodList.jsx
+│   │   │   ├── AddFood.jsx
+│   │   │   ├── EditFood.jsx
+│   │   │   ├── DeleteFood.jsx
+│   │   │   ├── FoodCategories.jsx
+│   │   │   └── FoodSearch.jsx
+│   │   │
+│   │   ├── 📁 mkdir waste/
+│   │   │   ├── WasteDashboard.jsx
+│   │   │   ├── AddWaste.jsx
+│   │   │   ├── WasteDetails.jsx
+│   │   │   ├── WasteHistory.jsx
+│   │   │   ├── WasteChart.jsx
+│   │   │   └── WasteFilters.jsx
+│   │   │
+│   │   ├── 📁 prediction/
+│   │   │   ├── PredictionDashboard.jsx
+│   │   │   ├── PredictionDetails.jsx
+│   │   │   ├── PredictionCalculator.jsx
+│   │   │   ├── PredictionAccuracy.jsx
+│   │   │   └── PredictionChart.jsx
+│   │   │
+│   │   ├── 📁 market/
+│   │   │   ├── MarketDashboard.jsx
+│   │   │   ├── ProductList.jsx
+│   │   │   ├── AddMarketItem.jsx
+│   │   │   ├── EditMarketItem.jsx
+│   │   │   ├── DeleteMarketItem.jsx
+│   │   │   ├── SearchMarket.jsx
+│   │   │   ├── MarketFilters.jsx
+│   │   │   └── ProductDetails.jsx
+│   │   │
+│   │   ├── 📁 buy/
+│   │   │   ├── BuyDashboard.jsx
+│   │   │   ├── BuyRequest.jsx
+│   │   │   ├── PurchaseDetails.jsx
+│   │   │   ├── MyPurchases.jsx
+│   │   │   └── PurchaseHistory.jsx
+│   │   │
+│   │   ├── 📁 sell/
+│   │   │   ├── SellDashboard.jsx
+│   │   │   ├── AddSale.jsx
+│   │   │   ├── SaleRequests.jsx
+│   │   │   ├── MySales.jsx
+│   │   │   ├── AcceptSale.jsx
+│   │   │   └── SaleHistory.jsx
+│   │   │
+│   │   ├── 📁 requests/
+│   │   │   ├── RequestDashboard.jsx
+│   │   │   ├── CreateRequest.jsx
+│   │   │   ├── NearbyRequests.jsx
+│   │   │   ├── RequestDetails.jsx
+│   │   │   ├── AcceptRequest.jsx
+│   │   │   └── MyRequests.jsx
+│   │   │
+│   │   ├── 📁 nearby/
+│   │   │   ├── NearbyRestaurants.jsx
+│   │   │   ├── NearbyFood.jsx
+│   │   │   ├── NearbyRequests.jsx
+│   │   │   └── LocationSelector.jsx
+│   │   │
+│   │   ├── 📁 charity/
+│   │   │   ├── CharityDashboard.jsx
+│   │   │   ├── DonationList.jsx
+│   │   │   ├── AddDonation.jsx
+│   │   │   ├── DonationDetails.jsx
+│   │   │   ├── AnathalayList.jsx
+│   │   │   ├── CharityRequest.jsx
+│   │   │   ├── DonationHistory.jsx
+│   │   │   └── DonationChart.jsx
+│   │   │
+│   │   ├── 📁 analytics/
+│   │   │   ├── AnalyticsDashboard.jsx
+│   │   │   ├── SalesAnalytics.jsx
+│   │   │   ├── WasteAnalytics.jsx
+│   │   │   ├── FoodAnalytics.jsx
+│   │   │   ├── PredictionAnalytics.jsx
+│   │   │   ├── MarketAnalytics.jsx
+│   │   │   ├── CharityAnalytics.jsx
+│   │   │   └── Charts/
+│   │   │       ├── BarChart.jsx
+│   │   │       ├── PieChart.jsx
+│   │   │       ├── LineChart.jsx
+│   │   │       ├── DoughnutChart.jsx
+│   │   │       └── ChartManager.jsx
+│   │   │
+│   │   ├── 📁 notifications/
+│   │   │   ├── NotificationCenter.jsx
+│   │   │   ├── NotificationList.jsx
+│   │   │   ├── ExpiryNotification.jsx
+│   │   │   ├── MarketNotification.jsx
+│   │   │   ├── RequestNotification.jsx
+│   │   │   └── DonationNotification.jsx
+│   │   │
+│   │   ├── 📁 profile/
+│   │   │   ├── Profile.jsx
+│   │   │   ├── EditProfile.jsx
+│   │   │   ├── RestaurantDetails.jsx
+│   │   │   ├── ChangePassword.jsx
+│   │   │   └── UserSettings.jsx
+│   │   │
+│   │   ├── 📁 settings/
+│   │   │   ├── Settings.jsx
+│   │   │   ├── NotificationSettings.jsx
+│   │   │   ├── PrivacySettings.jsx
+│   │   │   ├── LanguageSettings.jsx
+│   │   │   └── ThemeSettings.jsx
+│   │   │
+│   │   └── 📁 admin/
+│   │       │
+│   │       ├── AdminLogin.jsx
+│   │       ├── AdminDashboard.jsx
+│   │       │
+│   │       ├── 📁 accounts/
+│   │       │   ├── AccountList.jsx
+│   │       │   ├── AddAccount.jsx
+│   │       │   ├── EditAccount.jsx
+│   │       │   ├── RemoveAccount.jsx
+│   │       │   ├── BlockAccount.jsx
+│   │       │   └── VerifyAccount.jsx
+│   │       │
+│   │       ├── 📁 restaurants/
+│   │       │   ├── RestaurantList.jsx
+│   │       │   ├── RestaurantDetails.jsx
+│   │       │   ├── ApproveRestaurant.jsx
+│   │       │   └── BlockRestaurant.jsx
+│   │       │
+│   │       ├── 📁 food-management/
+│   │       │   ├── CategoryManagement.jsx
+│   │       │   ├── FoodItemManagement.jsx
+│   │       │   └── UnitManagement.jsx
+│   │       │
+│   │       ├── 📁 market-management/
+│   │       │   ├── MarketListings.jsx
+│   │       │   ├── ApproveListing.jsx
+│   │       │   ├── RemoveListing.jsx
+│   │       │   ├── SetMarketPrice.jsx
+│   │       │   └── PriceHistory.jsx
+│   │       │
+│   │       ├── 📁 transactions/
+│   │       │   ├── TransactionList.jsx
+│   │       │   ├── RequestList.jsx
+│   │       │   └── TransactionHistory.jsx
+│   │       │
+│   │       ├── 📁 request-management/
+│   │       │   ├── AllRequests.jsx
+│   │       │   ├── NearbyRequests.jsx
+│   │       │   └── ManageRequest.jsx
+│   │       │
+│   │       ├── 📁 charity-management/
+│   │       │   ├── AddAnathalay.jsx
+│   │       │   ├── VerifyAnathalay.jsx
+│   │       │   ├── RemoveAnathalay.jsx
+│   │       │   └── DonationRecords.jsx
+│   │       │
+│   │       ├── 📁 waste-records/
+│   │       │   ├── AllWasteRecords.jsx
+│   │       │   ├── SearchWaste.jsx
+│   │       │   ├── FilterWaste.jsx
+│   │       │   └── WasteAnalysis.jsx
+│   │       │
+│   │       ├── 📁 predictions/
+│   │       │   ├── PredictionList.jsx
+│   │       │   └── PredictionAccuracy.jsx
+│   │       │
+│   │       ├── 📁 reports/
+│   │       │   ├── SystemReport.jsx
+│   │       │   ├── WasteReport.jsx
+│   │       │   ├── SalesReport.jsx
+│   │       │   ├── DonationReport.jsx
+│   │       │   ├── MarketReport.jsx
+│   │       │   └── UserReport.jsx
+│   │       │
+│   │       └── 📁 admin-settings/
+│   │           ├── SystemSettings.jsx
+│   │           ├── MarketSettings.jsx
+│   │           ├── NotificationSettings.jsx
+│   │           └── CategoryManagement.jsx
+│   │
+│   ├── 📁 pages/
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── NotFound.jsx
+│   │   └── Terms.jsx
+│   │
+│   ├── 📁 layouts/
+│   │   ├── MainLayout.jsx
+│   │   ├── AuthLayout.jsx
+│   │   ├── AdminLayout.jsx
+│   │   └── DashboardLayout.jsx
+│   │
+│   ├── 📁 hooks/
+│   │   ├── useAuth.js
+│   │   ├── useApi.js
+│   │   ├── useLocalStorage.js
+│   │   ├── useNotification.js
+│   │   ├── useLocation.js
+│   │   ├── usePagination.js
+│   │   └── useChart.js
+│   │
+│   ├── 📁 context/
+│   │   ├── AuthContext.jsx
+│   │   ├── ThemeContext.jsx
+│   │   ├── NotificationContext.jsx
+│   │   └── SettingsContext.jsx
+│   │
+│   ├── 📁 services/
+│   │   ├── api/
+│   │   │   ├── axiosConfig.js
+│   │   │   ├── authApi.js
+│   │   │   ├── recordApi.js
+│   │   │   ├── foodApi.js
+│   │   │   ├── wasteApi.js
+│   │   │   ├── marketApi.js
+│   │   │   ├── buyApi.js
+│   │   │   ├── sellApi.js
+│   │   │   ├── requestApi.js
+│   │   │   ├── charityApi.js
+│   │   │   ├── predictionApi.js
+│   │   │   ├── analyticsApi.js
+│   │   │   └── adminApi.js
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── authService.js
+│   │   │   └── tokenManager.js
+│   │   │
+│   │   └── utils/
+│   │       ├── formatters.js
+│   │       ├── validators.js
+│   │       ├── dateHelpers.js
+│   │       ├── fileHelpers.js
+│   │       └── constants.js
+│   │
+│   ├── 📁 store/
+│   │   ├── slices/
+│   │   │   ├── authSlice.js
+│   │   │   ├── recordsSlice.js
+│   │   │   ├── foodSlice.js
+│   │   │   ├── wasteSlice.js
+│   │   │   ├── marketSlice.js
+│   │   │   ├── predictionSlice.js
+│   │   │   ├── notificationSlice.js
+│   │   │   └── adminSlice.js
+│   │   │
+│   │   └── store.js
+│   │
+│   ├── 📁 routes/
+│   │   ├── AppRoutes.jsx
+│   │   ├── PrivateRoute.jsx
+│   │   ├── AdminRoute.jsx
+│   │   └── PublicRoute.jsx
+│   │
+│   ├── 📁 styles/
+│   │   ├── global.css
+│   │   ├── variables.css
+│   │   ├── themes/
+│   │   │   ├── lightTheme.js
+│   │   │   └── darkTheme.js
+│   │   └── components/
+│   │       ├── dashboard.css
+│   │       ├── forms.css
+│   │       └── tables.css
+│   │
+│   ├── 📁 utils/
+│   │   ├── constants.js
+│   │   ├── helpers.js
+│   │   ├── validators.js
+│   │   └── formatters.js
+│   │
+│   ├── 📁 assets/
+│   │   ├── images/
+│   │   ├── icons/
+│   │   └── fonts/
+│   │
+│   ├── App.jsx
+│   ├── index.js
+│   └── reportWebVitals.js
+│
+├── 📁 database/
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Restaurant.js
+│   │   ├── FoodItem.js
+│   │   ├── DailyRecord.js
+│   │   ├── WasteRecord.js
+│   │   ├── MarketItem.js
+│   │   ├── PurchaseRequest.js
+│   │   ├── SaleRequest.js
+│   │   ├── NearbyRequest.js
+│   │   ├── Donation.js
+│   │   ├── Charity.js
+│   │   ├── Prediction.js
+│   │   ├── Notification.js
+│   │   └── Report.js
+│   │
+│   └── seed/
+│       └── seedData.js
+│
+├── 📁 backend/
+│   ├── 📁 controllers/
+│   │   ├── authController.js
+│   │   ├── recordController.js
+│   │   ├── foodController.js
+│   │   ├── wasteController.js
+│   │   ├── marketController.js
+│   │   ├── buyController.js
+│   │   ├── sellController.js
+│   │   ├── requestController.js
+│   │   ├── charityController.js
+│   │   ├── predictionController.js
+│   │   ├── analyticsController.js
+│   │   └── adminController.js
+│   │
+│   ├── 📁 models/
+│   │   ├── UserModel.js
+│   │   ├── RestaurantModel.js
+│   │   ├── FoodItemModel.js
+│   │   ├── DailyRecordModel.js
+│   │   ├── WasteRecordModel.js
+│   │   ├── MarketItemModel.js
+│   │   ├── PurchaseRequestModel.js
+│   │   ├── SaleRequestModel.js
+│   │   ├── NearbyRequestModel.js
+│   │   ├── DonationModel.js
+│   │   ├── CharityModel.js
+│   │   ├── PredictionModel.js
+│   │   ├── NotificationModel.js
+│   │   └── ReportModel.js
+│   │
+│   ├── 📁 services/
+│   │   ├── authService.js
+│   │   ├── recordService.js
+│   │   ├── foodService.js
+│   │   ├── wasteService.js
+│   │   ├── marketService.js
+│   │   ├── predictionService.js
+│   │   ├── notificationService.js
+│   │   ├── analyticsService.js
+│   │   └── adminService.js
+│   │
+│   ├── 📁 middleware/
+│   │   ├── auth.js
+│   │   ├── admin.js
+│   │   ├── validation.js
+│   │   └── errorHandler.js
+│   │
+│   ├── 📁 routes/
+│   │   ├── authRoutes.js
+│   │   ├── recordRoutes.js
+│   │   ├── foodRoutes.js
+│   │   ├── wasteRoutes.js
+│   │   ├── marketRoutes.js
+│   │   ├── buyRoutes.js
+│   │   ├── sellRoutes.js
+│   │   ├── requestRoutes.js
+│   │   ├── charityRoutes.js
+│   │   ├── predictionRoutes.js
+│   │   ├── analyticsRoutes.js
+│   │   └── adminRoutes.js
+│   │
+│   ├── 📁 config/
+│   │   ├── database.js
+│   │   ├── redis.js
+│   │   ├── jwt.js
+│   │   └── email.js
+│   │
+│   └── server.js
+│
+├── 📁 tests/
+│   ├── unit/
+│   │   ├── components/
+│   │   └── services/
+│   ├── integration/
+│   └── e2e/
+│
+├── 📁 docs/
+│   ├── API.md
+│   ├── DEPLOYMENT.md
+│   └── CONTRIBUTING.md
+│
+├── .env
+├── .env.example
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
+├── vite.config.js (or webpack.config.js)
+├── jest.config.js
+├── .eslintrc.js
+├── .prettierrc
+└── docker-compose.yml
+
+
+
+--------------------------------------------------------------------------------------
+
+Admin Control Center
+
+Admin should have full system control:
+
+ADMIN
+│
+├── Dashboard
+│
+├── Account Management
+│   ├── Add Account
+│   ├── Edit Account
+│   ├── Remove Account
+│   ├── Block Account
+│   └── Verify Account
+│
+├── Restaurant Management
+│   ├── Add
+│   ├── Remove
+│   ├── Verify
+│   └── Block
+│
+├── Food Management
+│   ├── Categories
+│   ├── Food Items
+│   └── Units
+│
+├── Marketplace
+│   ├── View Listings
+│   ├── Approve
+│   ├── Remove
+│   └── Set Market Price
+│
+├── Buy/Sell
+│   ├── Transactions
+│   ├── Requests
+│   └── History
+│
+├── "I Want" Requests
+│   ├── View Requests
+│   ├── Nearby Requests
+│   └── Manage Requests
+│
+├── Charity
+│   ├── Add Anathalay
+│   ├── Verify Anathalay
+│   ├── Remove
+│   └── Donation Records
+│
+├── Waste Records
+│   ├── All Records
+│   ├── Search
+│   ├── Filter
+│   └── Analysis
+│
+├── Predictions
+│   ├── Predictions
+│   └── Accuracy
+│
+├── Reports
+│   ├── Waste
+│   ├── Sales
+│   ├── Donations
+│   ├── Marketplace
+│   └── Users
+│
+└── Settings

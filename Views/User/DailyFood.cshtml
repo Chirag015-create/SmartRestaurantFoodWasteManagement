@@ -1,0 +1,67 @@
+@model IEnumerable<SmartRestaurantWasteManagement.Models.DailyFood>
+@{
+    ViewBag.Title = "Daily Prepared Food Record";
+}
+
+<div class="glass-card">
+    <h2><i class="fa-solid fa-kitchen-set"></i> Daily Food Preparation Log</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Track quantities of food prepared vs sold to prevent end-of-day food surplus waste.</p>
+
+    @using (Html.BeginForm("DailyFood", "User", FormMethod.Post, new { style = "margin-bottom: 2rem; background: rgba(15,23,42,0.5); padding: 1.5rem; border-radius: var(--radius-md);" }))
+    {
+        @Html.AntiForgeryToken()
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div class="form-group">
+                <label class="form-label">Select Food Item</label>
+                @Html.DropDownList("FoodId", (SelectList)ViewBag.Foods, "-- Select Food --", new { @class = "form-control-custom", required = "required" })
+            </div>
+            <div class="form-group">
+                <label class="form-label">Quantity Prepared</label>
+                <input type="number" step="0.1" name="QuantityPrepared" class="form-control-custom" placeholder="e.g. 50" required />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Quantity Sold</label>
+                <input type="number" step="0.1" name="QuantitySold" class="form-control-custom" placeholder="e.g. 42" required />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Prep Date</label>
+                <input type="date" name="PrepDate" class="form-control-custom" value="@DateTime.Today.ToString("yyyy-MM-dd")" required />
+            </div>
+        </div>
+        <button type="submit" class="btn-primary-custom" style="margin-top: 1rem;"><i class="fa-solid fa-plus"></i> Record Daily Batch</button>
+    }
+
+    <h3 style="margin-bottom: 1rem;">Prepared Batches History</h3>
+    <table class="table-custom">
+        <thead>
+            <tr>
+                <th>Prep Date</th>
+                <th>Food Item</th>
+                <th>Prepared</th>
+                <th>Sold</th>
+                <th>Left Over</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.PrepDate.ToString("yyyy-MM-dd")</td>
+                        <td><strong>@(item.Food != null ? item.Food.Name : "N/A")</strong></td>
+                        <td>@item.QuantityPrepared</td>
+                        <td>@item.QuantitySold</td>
+                        <td><span class="badge-custom @(item.QuantityLeft > 5 ? "badge-danger" : "badge-success")">@item.QuantityLeft</span></td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" style="text-align: center; color: var(--text-muted);">No daily food logs found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Smart Restaurant Waste Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        /* App shell: sidebar left, main right */
+        .app-shell {
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar — fixed width, scrolls independently */
+        .sidebar {
+            width: 260px;
+            min-width: 260px;
+            height: 100vh;
+            overflow-y: auto; /* ✅ makes sidebar scrollable */
+            overflow-x: hidden;
+            background: var(--bs-body-bg);
+            border-right: 1px solid var(--bs-border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+            .sidebar .brand {
+                padding: 1rem 1.25rem;
+                font-weight: 700;
+                border-bottom: 1px solid var(--bs-border-color);
+                position: sticky;
+                top: 0;
+                background: var(--bs-body-bg);
+                z-index: 2;
+            }
+
+            .sidebar .nav-link {
+                color: var(--bs-secondary-color);
+                padding: .55rem 1.25rem;
+                border-radius: 0;
+                display: flex;
+                align-items: center;
+                gap: .55rem;
+                font-size: .95rem;
+            }
+
+                .sidebar .nav-link:hover,
+                .sidebar .nav-link.active {
+                    background: rgba(25, 135, 84, .12);
+                    color: var(--bs-success);
+                    border-left: 3px solid var(--bs-success);
+                }
+
+        /* Main content — scrolls independently */
+        .main-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+            .main-area .topbar {
+                padding: .5rem 1rem;
+                border-bottom: 1px solid var(--bs-border-color);
+                background: var(--bs-body-bg);
+            }
+
+            .main-area .content {
+                flex: 1;
+                overflow-y: auto; /* ✅ main content scrolls */
+                padding: 1.5rem;
+            }
+
+                /* Thin scrollbar (nice touch) */
+                .sidebar::-webkit-scrollbar,
+                .main-area .content::-webkit-scrollbar {
+                    width: 8px;
+                }
+
+                .sidebar::-webkit-scrollbar-thumb,
+                .main-area .content::-webkit-scrollbar-thumb {
+                    background: rgba(255,255,255,.15);
+                    border-radius: 4px;
+                }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <div class="app-shell">
+
+        <!-- ================= SIDEBAR ================= -->
+        <aside class="sidebar">
+            <a class="brand d-flex align-items-center gap-2 text-success text-decoration-none"
+               href="@Url.Action("Index", "Home")">
+                <i class="fa-solid fa-leaf"></i> SmartWaste ♻️
+            </a>
+
+            <ul class="nav flex-column py-2">
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Index","Home")"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Dashboard","User")"><i class="fa-solid fa-gauge-high"></i> Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("FoodList","User")"><i class="fa-solid fa-utensils"></i> Food List</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("AddFood","User")"><i class="fa-solid fa-plus"></i> Add Food</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("DailyFood","User")"><i class="fa-solid fa-kitchen-set"></i> Daily Prep</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("WasteEntry","User")"><i class="fa-solid fa-trash-can"></i> Log Waste</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("WasteHistory","User")"><i class="fa-solid fa-clock-rotate-left"></i> Waste History</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Prediction","User")"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Forecast</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Inventory","User")"><i class="fa-solid fa-boxes-stacked"></i> Inventory</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Donation","User")"><i class="fa-solid fa-hand-holding-heart"></i> Donation</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Reports","User")"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
+                <li class="nav-item"><a class="nav-link" href="@Url.Action("Notifications","User")"><i class="fa-solid fa-bell"></i> Notifications</a></li>
+            </ul>
+
+            <div class="mt-auto p-3 border-top border-secondary-subtle">
+
+                <a class="btn btn-outline-success btn-sm w-100 mb-2"
+                   href="@Url.Action("Profile", "User")">
+                    <i class="fa-solid fa-user me-1"></i> Profile
+                </a>
+
+                @* Always points to Admin DASHBOARD.
+        The AdminAuthorize filter will redirect to /Admin/Login
+        if no admin session exists. *@
+                <a class="btn btn-outline-danger btn-sm w-100 mb-2"
+                   href="@Url.Action("Dashboard", "Admin")">
+                    <i class="fa-solid fa-user-shield me-1"></i> Admin Dashboard
+                </a>
+
+                @if (Session["UserId"] != null)
+                {
+                    <a class="btn btn-outline-secondary btn-sm w-100"
+                       href="@Url.Action("Logout", "User")">
+                        <i class="fa-solid fa-right-from-bracket me-1"></i> Logout
+                    </a>
+                }
+            </div>
+        </aside>
+
+        <!-- ================= MAIN AREA ================= -->
+        <div class="main-area">
+            <div class="topbar d-flex justify-content-between align-items-center">
+                <span class="fw-semibold">@ViewBag.Title</span>
+                <span class="text-secondary small">@DateTime.Now.ToString("dd MMM yyyy")</span>
+            </div>
+
+            <div class="content">
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/jquery.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

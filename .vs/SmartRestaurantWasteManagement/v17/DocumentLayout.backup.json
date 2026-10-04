@@ -1,0 +1,261 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\filters\\adminauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:filters\\adminauthorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:views\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\views\\shared\\_loginlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:views\\shared\\_loginlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|d:\\marwadi university\\computer science and engineering\\semester 5\\smartrestaurantwastemanagement\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\migrations\\202610031200000_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8B7C9D0-1234-4567-89AB-CDEF01234567}|SmartRestaurantWasteManagement.csproj|solutionrelative:migrations\\202610031200000_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAADwv2QAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-04T06:55:55.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminAuthorizeAttribute.cs",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Filters\\AdminAuthorizeAttribute.cs",
+              "RelativeDocumentMoniker": "Filters\\AdminAuthorizeAttribute.cs",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Filters\\AdminAuthorizeAttribute.cs",
+              "RelativeToolTip": "Filters\\AdminAuthorizeAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T06:51:42.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-04T05:18:10.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Web.config",
+              "RelativeDocumentMoniker": "Views\\Web.config",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Web.config",
+              "RelativeToolTip": "Views\\Web.config",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswDIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-03T09:08:03.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwEwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T08:26:10.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAuwF4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T06:12:23.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAAJAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-04T06:00:33.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\RouteConfig.cs",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-04T05:58:47.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAAAHQAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-04T07:00:32.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswBAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-10-04T06:26:42.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_LoginLayout.cshtml",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Shared\\_LoginLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginLayout.cshtml",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Shared\\_LoginLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginLayout.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAmwDMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-04T06:05:29.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\User\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\User\\Login.cshtml",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\User\\Login.cshtml",
+              "RelativeToolTip": "Views\\User\\Login.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-04T06:03:57.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Admin\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Login.cshtml",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Views\\Admin\\Login.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Login.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-04T06:15:12.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "202610031200000_InitialCreate.cs",
+              "DocumentMoniker": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Migrations\\202610031200000_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\202610031200000_InitialCreate.cs",
+              "ToolTip": "D:\\MARWADI UNIVERSITY\\Computer Science and Engineering\\Semester 5\\SmartRestaurantWasteManagement\\Migrations\\202610031200000_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\202610031200000_InitialCreate.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T09:06:27.156Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

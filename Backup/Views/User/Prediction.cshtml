@@ -1,0 +1,54 @@
+@model IEnumerable<SmartRestaurantWasteManagement.Models.Prediction>
+@{
+    ViewBag.Title = "AI Demand & Waste Prediction";
+}
+
+<div class="glass-card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <div>
+            <h2><i class="fa-solid fa-wand-magic-sparkles"></i> AI Demand & Prep Forecast</h2>
+            <p style="color: var(--text-secondary); margin-top: 0.25rem;">Machine Learning predictive analysis to recommend optimal food preparation quantities.</p>
+        </div>
+        @using (Html.BeginForm("GenerateForecast", "Prediction", FormMethod.Post))
+        {
+            <button type="submit" class="btn-primary-custom">
+                <i class="fa-solid fa-rotate"></i> Run AI Prediction
+            </button>
+        }
+    </div>
+
+    <table class="table-custom">
+        <thead>
+            <tr>
+                <th>Target Date</th>
+                <th>Food Item</th>
+                <th>Predicted Demand</th>
+                <th>Recommended Prep</th>
+                <th>Est. Waste Saved</th>
+                <th>Model Confidence</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.PredictionDate.ToString("yyyy-MM-dd")</td>
+                        <td><strong>@(item.Food != null ? item.Food.Name : "N/A")</strong></td>
+                        <td>@item.PredictedDemandQty units</td>
+                        <td style="color: var(--accent-green); font-weight: 700;">@item.RecommendedPrepQty units</td>
+                        <td><span class="badge-custom badge-success">+@item.EstimatedWasteReductionPct%</span></td>
+                        <td><span class="badge-custom badge-info">@(item.ConfidenceScore * 100)%</span></td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" style="text-align: center; color: var(--text-muted);">No predictions generated yet. Click 'Run AI Prediction' to compute forecasts.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

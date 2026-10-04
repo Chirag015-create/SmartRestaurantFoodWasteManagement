@@ -1,0 +1,165 @@
+@model IEnumerable<SmartRestaurantWasteManagement.Models.Waste>
+@{
+    ViewBag.Title = "User Dashboard";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-secondary-subtle">
+    <div>
+        <h2 class="fw-bold mb-1"><i class="fa-solid fa-gauge-high text-success me-2"></i>Staff Operations Dashboard</h2>
+        <p class="text-secondary mb-0">Overview of daily food preparation, waste logs, and stock inventory.</p>
+    </div>
+    <div class="d-flex gap-2">
+        <a href="@Url.Action("WasteEntry", "User")" class="btn btn-danger d-inline-flex align-items-center gap-2">
+            <i class="fa-solid fa-plus-circle"></i> Log Waste Record
+        </a>
+        <a href="@Url.Action("DailyFood", "User")" class="btn btn-outline-success d-inline-flex align-items-center gap-2">
+            <i class="fa-solid fa-utensils"></i> Record Daily Prep
+        </a>
+    </div>
+</div>
+
+<!-- Key Stat Cards Grid -->
+<div class="row g-3 mb-4">
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card bg-dark border-secondary shadow-sm h-100">
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <div>
+                    <span class="text-secondary small fw-semibold text-uppercase">Active Menu Items</span>
+                    <h2 class="display-6 fw-bold mb-0 text-light">@ViewBag.TotalFoodCount</h2>
+                </div>
+                <div class="p-3 bg-success bg-opacity-10 text-success rounded-3">
+                    <i class="fa-solid fa-book-open fs-3"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card bg-dark border-secondary shadow-sm h-100">
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <div>
+                    <span class="text-secondary small fw-semibold text-uppercase">Daily Prepared Food</span>
+                    <h2 class="display-6 fw-bold mb-0 text-info">@ViewBag.DailyPrepared <small class="fs-6">kg</small></h2>
+                </div>
+                <div class="p-3 bg-info bg-opacity-10 text-info rounded-3">
+                    <i class="fa-solid fa-fire fs-3"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card bg-dark border-secondary shadow-sm h-100">
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <div>
+                    <span class="text-secondary small fw-semibold text-uppercase">Total Waste Logged</span>
+                    <h2 class="display-6 fw-bold mb-0 text-danger">@ViewBag.TotalWasted <small class="fs-6">kg</small></h2>
+                </div>
+                <div class="p-3 bg-danger bg-opacity-10 text-danger rounded-3">
+                    <i class="fa-solid fa-trash-can fs-3"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card bg-dark border-secondary shadow-sm h-100">
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <div>
+                    <span class="text-secondary small fw-semibold text-uppercase">Low Stock Alerts</span>
+                    <h2 class="display-6 fw-bold mb-0 text-warning">@ViewBag.LowStockItems</h2>
+                </div>
+                <div class="p-3 bg-warning bg-opacity-10 text-warning rounded-3">
+                    <i class="fa-solid fa-triangle-exclamation fs-3"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Content Section: Recent Waste Logs Table -->
+<div class="row g-4">
+    <div class="col-12 col-lg-8">
+        <div class="card bg-dark border-secondary shadow-sm">
+            <div class="card-header bg-body-tertiary border-secondary d-flex justify-content-between align-items-center py-3">
+                <h5 class="card-title mb-0 text-light fw-semibold">
+                    <i class="fa-solid fa-clock-rotate-left me-2 text-danger"></i>Recent Waste Records
+                </h5>
+                <a href="@Url.Action("WasteHistory", "User")" class="btn btn-sm btn-outline-secondary">View All</a>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-dark table-hover align-middle mb-0">
+                        <thead class="table-group-divider border-secondary text-secondary small text-uppercase">
+                            <tr>
+                                <th>Logged Date</th>
+                                <th>Food Item</th>
+                                <th>Wasted Quantity</th>
+                                <th>Reason</th>
+                                <th class="text-end">Financial Loss</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.Any())
+                            {
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td class="text-secondary">@item.LoggedDate.ToString("yyyy-MM-dd HH:mm")</td>
+                                        <td class="fw-semibold">@(item.Food != null ? item.Food.Name : "N/A")</td>
+                                        <td><span class="badge bg-secondary">@item.QuantityWasted @item.Unit</span></td>
+                                        <td><span class="badge bg-warning text-dark">@item.Reason</span></td>
+                                        <td class="text-end text-danger fw-bold">$@item.CostLoss.ToString("F2")</td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="5" class="text-center text-secondary py-4">
+                                        <i class="fa-solid fa-folder-open display-6 mb-2 d-block opacity-50"></i>
+                                        No waste records logged recently.
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions & Links Sidebar Card -->
+    <div class="col-12 col-lg-4">
+        <div class="card bg-dark border-secondary shadow-sm mb-4">
+            <div class="card-header bg-body-tertiary border-secondary py-3">
+                <h5 class="card-title mb-0 text-light fw-semibold">
+                    <i class="fa-solid fa-bolt me-2 text-warning"></i>Quick Actions
+                </h5>
+            </div>
+            <div class="card-body d-flex flex-column gap-2">
+                <a href="@Url.Action("AddFood", "User")" class="btn btn-outline-success text-start d-flex align-items-center justify-content-between p-3">
+                    <div>
+                        <div class="fw-bold"><i class="fa-solid fa-plus-circle me-2"></i>Add Food Item</div>
+                        <small class="text-secondary">Create new dish in master menu</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="@Url.Action("Prediction", "User")" class="btn btn-outline-info text-start d-flex align-items-center justify-content-between p-3">
+                    <div>
+                        <div class="fw-bold"><i class="fa-solid fa-wand-magic-sparkles me-2"></i>AI Demand Forecast</div>
+                        <small class="text-secondary">Generate prep recommendations</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="@Url.Action("Donation", "User")" class="btn btn-outline-primary text-start d-flex align-items-center justify-content-between p-3">
+                    <div>
+                        <div class="fw-bold"><i class="fa-solid fa-hand-holding-heart me-2"></i>Schedule Food Donation</div>
+                        <small class="text-secondary">Send surplus food to shelter</small>
+                    </div>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

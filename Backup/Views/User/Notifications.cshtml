@@ -1,0 +1,23 @@
+@{
+    ViewBag.Title = "Notifications Center";
+}
+
+<div class="glass-card">
+    <h2><i class="fa-solid fa-bell"></i> System Notifications & Alerts 🔔</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Real-time notifications for low stock, expiring ingredients, and prediction alerts.</p>
+
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+        <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid var(--accent-amber); padding: 1rem; border-radius: var(--radius-sm);">
+            <strong>⚠️ Low Stock Warning:</strong> Fresh Tomatoes inventory is below threshold (3.0 kg remaining).
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">15 minutes ago</div>
+        </div>
+        <div style="background: rgba(16, 185, 129, 0.1); border-left: 4px solid var(--accent-green); padding: 1rem; border-radius: var(--radius-sm);">
+            <strong>✅ AI Prediction Ready:</strong> Tomorrow's prep forecast is generated with 89% confidence.
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">2 hours ago</div>
+        </div>
+        <div style="background: rgba(59, 130, 246, 0.1); border-left: 4px solid var(--accent-blue); padding: 1rem; border-radius: var(--radius-sm);">
+            <strong>❤️ Donation Pickup Scheduled:</strong> City Food Shelter confirmed pickup for 5:30 PM.
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">4 hours ago</div>
+        </div>
+    </div>
+</div>

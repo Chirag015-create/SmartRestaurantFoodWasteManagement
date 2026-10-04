@@ -1,0 +1,44 @@
+@model IEnumerable<SmartRestaurantWasteManagement.Models.Waste>
+@{
+    ViewBag.Title = "Waste History";
+}
+
+<div class="glass-card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h2><i class="fa-solid fa-clock-rotate-left"></i> Waste Logging History</h2>
+        <a href="@Url.Action("WasteEntry", "User")" class="btn-primary-custom"><i class="fa-solid fa-plus"></i> New Waste Entry</a>
+    </div>
+
+    <table class="table-custom">
+        <thead>
+            <tr>
+                <th>Log Date</th>
+                <th>Food Item</th>
+                <th>Quantity</th>
+                <th>Reason</th>
+                <th>Estimated Financial Loss</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.LoggedDate.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td><strong>@(item.Food != null ? item.Food.Name : "N/A")</strong></td>
+                        <td>@item.QuantityWasted @item.Unit</td>
+                        <td><span class="badge-custom badge-warning">@item.Reason</span></td>
+                        <td style="color: var(--accent-rose); font-weight: 600;">$@item.CostLoss.ToString("F2")</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="5" style="text-align: center; color: var(--text-muted);">No waste records found in history.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

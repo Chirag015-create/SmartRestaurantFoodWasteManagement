@@ -1,0 +1,76 @@
+@{
+    ViewBag.Title = "User Portal Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<div class="row justify-content-center align-items-center py-5">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-5 col-xl-4">
+        <div class="card bg-dark text-light border-secondary shadow-lg rounded-4 overflow-hidden">
+            <div class="card-header bg-gradient bg-emerald-dark text-center py-4 border-secondary">
+                <div class="display-6 text-success mb-2">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <h3 class="fw-bold mb-1">Staff Portal Login</h3>
+                <p class="text-secondary small mb-0">Smart Restaurant Waste Management System</p>
+            </div>
+
+            <div class="card-body p-4">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center gap-2 mb-4" role="alert">
+                        <i class="fa-solid fa-circle-exclamation flex-shrink-0"></i>
+                        <div>@ViewBag.Error</div>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                }
+
+                @using (Html.BeginForm("Login", "User", FormMethod.Post, new { @class = "needs-validation" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-light fw-medium">
+                            <i class="fa-solid fa-envelope me-1 text-success"></i> Email Address
+                        </label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-secondary border-secondary text-light">@@</span>
+                            <input type="email" id="email" name="email" class="form-control bg-body-tertiary text-light border-secondary" placeholder="staff@restaurant.com" required />
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <label for="password" class="form-label text-light fw-medium mb-0">
+                                <i class="fa-solid fa-lock me-1 text-success"></i> Password
+                            </label>
+                            <a href="#" class="small text-success text-decoration-none">Forgot?</a>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-text bg-secondary border-secondary text-light"><i class="fa-solid fa-key"></i></span>
+                            <input type="password" id="password" name="password" class="form-control bg-body-tertiary text-light border-secondary" placeholder="Enter your password" required />
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success btn-lg fw-semibold shadow-sm">
+                            <i class="fa-solid fa-right-to-bracket me-2"></i> Sign In to Dashboard
+                        </button>
+                    </div>
+                }
+            </div>
+
+            <div class="card-footer bg-body-tertiary border-secondary text-center py-3">
+                <small class="text-secondary d-block mb-2">
+                    Demo Access: <code>staff@restaurant.com</code> / <code>password123</code>
+                </small>
+                <a href="@Url.Action("Login", "Admin")" class="small text-danger text-decoration-none">
+                    <i class="fa-solid fa-user-shield me-1"></i> Admin Login
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

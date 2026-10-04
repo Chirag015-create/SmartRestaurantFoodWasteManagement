@@ -1,0 +1,40 @@
+@{
+    ViewBag.Title = "Food Surplus Donation";
+}
+
+<div class="glass-card">
+    <h2><i class="fa-solid fa-hand-holding-heart"></i> Surplus Food Donation Portal ❤️</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+        Redirect high-quality edible un-sold food to local charities, shelters, and food banks before expiry.
+    </p>
+
+    <div style="max-width: 600px; background: rgba(15,23,42,0.5); padding: 1.5rem; border-radius: var(--radius-md);">
+        <h3 style="margin-bottom: 1rem;">Register Food Donation Batch</h3>
+        <form>
+            <div class="form-group">
+                <label class="form-label">Select Surplus Food Dish</label>
+                <input type="text" class="form-control-custom" placeholder="e.g. Steamed Basmati Rice & Vegetables" required />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Available Quantity (Portions/Kg)</label>
+                <input type="number" class="form-control-custom" placeholder="25" required />
+            </div>
+            <div class="form-group">
+                <label class="form-label">Target Charity / Shelter</label>
+                <select class="form-control-custom" required>
+                    <option value="">-- Select Partner Shelter --</option>
+                    <option>City Food Shelter & Care</option>
+                    <option>Helping Hands Orphanage</option>
+                    <option>Community Meal Bank</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Pickup Window Time</label>
+                <input type="time" class="form-control-custom" required />
+            </div>
+            <button type="button" class="btn-primary-custom" onclick="alert('Donation batch scheduled for pickup!')">
+                <i class="fa-solid fa-paper-plane"></i> Schedule Pickup
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+@model IEnumerable<SmartRestaurantWasteManagement.Models.User>
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Admin - Manage Users";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-danger-subtle">
+    <div>
+        <h2 class="fw-bold mb-1 text-light">
+            <i class="fa-solid fa-users-gear text-info me-2"></i>System User Accounts
+        </h2>
+        <p class="text-secondary mb-0">Manage system users, staff privileges, roles, and restaurant registrations.</p>
+    </div>
+</div>
+
+<div class="card bg-dark border-secondary shadow-sm">
+    <div class="card-header bg-body-tertiary border-secondary py-3">
+        <h5 class="card-title mb-0 text-light fw-semibold">User Directory</h5>
+    </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-dark table-hover align-middle mb-0">
+                <thead class="table-group-divider border-secondary text-secondary small text-uppercase">
+                    <tr>
+                        <th>User ID</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>System Role</th>
+                        <th>Restaurant Name</th>
+                        <th class="text-center">Account Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model != null && Model.Any())
+                    {
+                        foreach (var user in Model)
+                        {
+                            <tr>
+                                <td class="text-secondary fw-semibold">#@user.UserId</td>
+                                <td class="fw-bold text-light">@user.Username</td>
+                                <td>@user.Email</td>
+                                <td>
+                                    @if (user.Role == "Admin")
+                                    {
+                                        <span class="badge bg-danger bg-opacity-20 text-danger border border-danger">Admin</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-info bg-opacity-20 text-info border border-info">@user.Role</span>
+                                    }
+                                </td>
+                                <td>@user.RestaurantName</td>
+                                <td class="text-center">
+                                    @if (user.IsActive)
+                                    {
+                                        <span class="badge bg-success">Active</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-secondary">Disabled</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center text-secondary py-4">
+                                <i class="fa-solid fa-users-slash display-6 mb-2 d-block opacity-50"></i>
+                                No user accounts registered in database.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
