@@ -180,6 +180,7 @@ This project is **not a complete production system**. Some features are simplifi
 ## 👨‍💻 Author
 
 **Chirag Rathod**
+
 **Amit Kumar**
 
 ---
